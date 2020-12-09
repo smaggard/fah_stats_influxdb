@@ -1,4 +1,7 @@
 # fah_stats_influxdb
+A small python application that will download the public stats file from folding at home and import the stats for your team into an influxdb.
+
+You can then utilize the influx db to display those in grafana.
 
 ## Setup
 1. Create an influx database on your influx server.
@@ -16,6 +19,9 @@ pip3 install wget
 pip3 install bz2
 ```
 4. Run script
+Easiest way to do this would be to add it to a cronjob, but no more often than every 10 minutes
 ``` 
 python3 update_stats.py
 ```
+5. Import Grafana dashboard
+You can import the grafana dashboard by going to the import page in grafana and pasting in in the JSON from the dashboard.json file
