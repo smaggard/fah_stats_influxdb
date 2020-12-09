@@ -21,9 +21,6 @@ measurement = "Folding Stats"
 url = 'https://apps.foldingathome.org/daily_user_summary.txt.bz2'
 
 iso_time = time.ctime(datetime.utcnow().timestamp())
-
-client = InfluxDBClient(host='192.168.1.16', port=8086)
-client.switch_database('fah_stats')
 measurement = "Folding Stats"
 
 
