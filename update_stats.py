@@ -14,13 +14,11 @@ path = '<path to download .bz2 file to>'
 client = InfluxDBClient(host='<host>', port=8086)
 client.switch_database('<db_name>')
 
-
-measurement = "Folding Stats"
-
 # URL to the folding at home stats file.
 url = 'https://apps.foldingathome.org/daily_user_summary.txt.bz2'
-
+# utc timestamp for adding row.
 iso_time = time.ctime(datetime.utcnow().timestamp())
+# Measurement Name
 measurement = "Folding Stats"
 
 

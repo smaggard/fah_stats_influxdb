@@ -14,14 +14,14 @@ client.switch_database('<db_name>')
 ```
 3. Install the required modules
 ```
-pip3 install influxdb
-pip3 install wget
-pip3 install bz2
+pip3 -r requirements.txt
 ```
 4. Run script
+
 Easiest way to do this would be to add it to a cronjob, but no more often than every 10 minutes
 ``` 
 python3 update_stats.py
 ```
 5. Import Grafana dashboard
+
 You can import the grafana dashboard by going to the import page in grafana and pasting in in the JSON from the dashboard.json file
