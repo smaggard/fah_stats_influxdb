@@ -1,7 +1,6 @@
 #!/bin/env python3
 import time
 from datetime import datetime
-import sys
 from influxdb import InfluxDBClient
 import wget
 import bz2
