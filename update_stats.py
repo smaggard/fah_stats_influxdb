@@ -56,7 +56,7 @@ class FAHStats(object):
             stats = line.decode("utf-8").strip().split("\t")
             # Validate we have all the fields we need
             if len(stats) == 4:
-                user = stat[0]
+                user = stats[0]
                 points = stats[1]
                 wus = stats[2]
                 team_number = stats[3]
