@@ -52,7 +52,7 @@ class FAHStats(object):
     def process_stats(self, input_file):
         print("Reading File")
         for line in input_file.readlines():
-            #Create an array object
+            # Create an array object
             stats = line.decode("utf-8").strip().split("\t")
             # Validate we have all the fields we need
             if len(stats) == 4:
@@ -65,14 +65,14 @@ class FAHStats(object):
                     data = [
                         {
                             "measurement": measurement,
-                               "tags": {
-                                   "User": user,
-                                },
-                                "time": iso_time,
-                                "fields": {
-                                   "Total Points" : points,
-                                   "Total WUs": wus
-                                }
+                            "tags": {
+                                "User": user,
+                            },
+                            "time": iso_time,
+                            "fields": {
+                                "Total Points": points,
+                                "Total WUs": wus
+                            }
                         }
                     ]
                     try:
