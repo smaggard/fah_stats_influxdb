@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/bin/env python3
 import time
 from datetime import datetime
 import sys
