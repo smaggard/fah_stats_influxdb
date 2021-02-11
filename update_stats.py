@@ -6,7 +6,7 @@ import wget
 import bz2
 import os
 
-# Update the following items to match your environment.  You will need to create the influx db, 
+# Update the following items to match your environment.  You will need to create the influx db,
 # This script does not create it.
 team = '<team number to track>'
 path = '<path to download .bz2 file to>'
@@ -50,10 +50,7 @@ class FAHStats(object):
             stats = line.decode("utf-8").strip().split("\t")
             # Validate we have all the fields we need
             if len(stats) == 4:
-                user = stats[0]
-                points = stats[1]
-                wus = stats[2]
-                team_number = stats[3]
+                user, points, wus, team_number = stats
                 # Check it's out team
                 if team_number == team:
                     data = [
@@ -74,7 +71,7 @@ class FAHStats(object):
                     except Exception:
                         print("Couldn't write data to influx")
                         pass
-    
+
             # Close the influx connection
             client.close()
         return True
